@@ -1,0 +1,33 @@
+ip: 192.168.56.56
+memory: 2048
+cpus: 2
+provider: virtualbox
+authorize: ~/.ssh/id_rsa.pub
+keys:
+    - ~/.ssh/id_rsa
+folders:
+    -
+        map: /home/cprimbee/Development/authorize-slim-4
+        to: /home/vagrant/code
+sites:
+    -
+        map: slim.auth
+        to: /home/vagrant/code/public
+databases:
+    - slim
+features:
+    -
+        mysql: true
+    -
+        mariadb: false
+    -
+        postgresql: false
+    -
+        ohmyzsh: false
+    -
+        webdriver: false
+services:
+    -
+        enabled: [mysql]
+name: authorize-slim-4
+hostname: authorize-slim-4
