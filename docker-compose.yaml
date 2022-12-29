@@ -1,0 +1,36 @@
+version: "3.1"
+
+services:
+  app:
+    image: php:8.2.0-alpine3.17
+    ports:
+      - 80:80
+    volumes:
+      - .:/var/www/html
+    extra_hosts:
+      - "host.docker.internal:172.17.0.1"
+    depends_on:
+      - db
+
+  db:
+    container_name: slim-db
+    image: mariadb:latest
+    restart: always
+    ports:
+      - 3306:3306
+    environment:
+      - MARIADB_ROOT_USERNAME=root
+      - MARIADB_ROOT_PASSWORD=root
+      - MARIADB_DATABASE=slim
+      - MARIADB_USER=homestead
+      - MARIADB_PASSWORD=secret
+    extra_hosts:
+      - "host.docker.internal:172.17.0.1"
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+    depends_on:
+      - db

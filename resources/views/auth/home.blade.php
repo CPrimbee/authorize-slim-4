@@ -3,7 +3,13 @@
 @section('content')
   <div style='padding:10px'>
     <p>
-      Home Page {{ env('NON_EXISTING_ENV_VALUE', 'Value Default To Me!!') }}
+      Home Page
+
+      @foreach ($users as $user)
+        <pre>
+          {{ $user->name }} {{ $user->email }} {{ $user->password }}
+        </pre>
+      @endforeach
     </p>
   </div>
 @endsection 

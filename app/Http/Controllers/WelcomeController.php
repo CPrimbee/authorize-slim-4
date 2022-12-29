@@ -4,15 +4,17 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers;
 
+use App\User;
 use App\Support\View;
 
 class WelcomeController
 {
-  public function index(View $view)
+  public function index(View $view, User $user)
   {
+    $users = $user->get();
     $name = 'Clean Code Studio';
 
-    return $view('auth.home', compact('name'));
+    return $view('auth.home', compact('name', 'users'));
   }
 
   public function show(View $view, $name, $id)
