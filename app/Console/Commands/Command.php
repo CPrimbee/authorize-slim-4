@@ -11,4 +11,9 @@ class Command extends \Boot\Foundation\Console\Command
   {
     return [];
   }
+
+  protected function options()
+  {
+    return [];
+  }
 }

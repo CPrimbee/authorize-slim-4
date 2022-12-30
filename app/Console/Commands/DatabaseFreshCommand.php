@@ -12,11 +12,6 @@ class DatabaseFreshCommand extends Command
   protected $help = 'Drop all database table and re-migrate, then re-seed all tables';
   protected $description = 'Drop all database table and re-migrate, then re-seed all tables';
 
-  protected function arguments()
-  {
-    return [];
-  }
-
   public function handler()
   {
     $column = "Tables_in_" . env("DB_DATABASE");
