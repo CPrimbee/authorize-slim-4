@@ -3,7 +3,7 @@
 
 use Phinx\Seed\AbstractSeed;
 
-class UserTableSeeder extends AbstractSeed
+class TeamsSeeder extends AbstractSeed
 {
     /**
      * Run Method.
@@ -15,6 +15,10 @@ class UserTableSeeder extends AbstractSeed
      */
     public function run(): void
     {
-        factory(App\User::class, 1)->create();
+        $users = factory(App\User::class, 5)->create();
+
+        $users->each(fn ($user) => factory(App\Team::class, 1)->create([
+            'user_id' => $user->id
+        ]));
     }
 }

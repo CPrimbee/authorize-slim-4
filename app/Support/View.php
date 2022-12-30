@@ -31,7 +31,6 @@ class View
   {
     $cache = config('blade.cache');
     $views = config('blade.views');
-    // dd(['chegou aqui', $views, $cache]);
 
     $blade = (new Blade($views, $cache))->make($template, $with);
 
