@@ -25,6 +25,7 @@
     "vue-template-compiler": "^2.7.14"
   },
   "dependencies": {
+    "tailwindcss": "^3.2.4",
     "vue-router": "^4.1.6",
     "vuejs-service-container": "^1.1.1",
     "vuex": "^4.1.0"
