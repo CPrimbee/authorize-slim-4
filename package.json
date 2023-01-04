@@ -1,0 +1,32 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "yarn run development",
+    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "yarn run development -- --watch",
+    "watch-poll": "yarn run watch -- --watch-poll",
+    "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "prod": "yarn run production",
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --config=node_modules/laravel-mix/setup/webpack.config.js"
+  },
+  "devDependencies": {
+    "axios": "^1.2.2",
+    "bootstrap": "^5.2.3",
+    "cross-env": "^7.0.3",
+    "jquery": "^3.6.3",
+    "laravel-mix": "^6.0.49",
+    "lodash": "^4.17.21",
+    "popper.js": "^1.16.1",
+    "resolve-url-loader": "^5.0.0",
+    "sass": "^1.57.1",
+    "sass-loader": "^13.2.0",
+    "vue": "^3.2.45",
+    "vue-loader": "^17.0.1",
+    "vue-template-compiler": "^2.7.14"
+  },
+  "dependencies": {
+    "vue-router": "^4.1.6",
+    "vuejs-service-container": "^1.1.1",
+    "vuex": "^4.1.0"
+  }
+}
