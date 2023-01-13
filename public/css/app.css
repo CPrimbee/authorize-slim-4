@@ -478,6 +478,9 @@ video {
 .mt-10 {
   margin-top: 2.5rem !important;
 }
+.mt-6 {
+  margin-top: 1.5rem !important;
+}
 .flex {
   display: flex !important;
 }
@@ -487,11 +490,23 @@ video {
 .w-1\/2 {
   width: 50% !important;
 }
+.w-1 {
+  width: 0.25rem !important;
+}
+.w-full {
+  width: 100% !important;
+}
+.flex-wrap {
+  flex-wrap: wrap !important;
+}
 .items-center {
   align-items: center !important;
 }
 .justify-end {
   justify-content: flex-end !important;
+}
+.justify-center {
+  justify-content: center !important;
 }
 .justify-between {
   justify-content: space-between !important;
@@ -508,6 +523,10 @@ video {
 .bg-white {
   --tw-bg-opacity: 1 !important;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity)) !important;
+}
+.bg-blue-500 {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(59 130 246 / var(--tw-bg-opacity)) !important;
 }
 .p-4 {
   padding: 1rem !important;
@@ -526,6 +545,14 @@ video {
 .text-gray-800 {
   --tw-text-opacity: 1 !important;
   color: rgb(31 41 55 / var(--tw-text-opacity)) !important;
+}
+.text-gray-600 {
+  --tw-text-opacity: 1 !important;
+  color: rgb(75 85 99 / var(--tw-text-opacity)) !important;
+}
+.text-white {
+  --tw-text-opacity: 1 !important;
+  color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
 }
 .shadow-md {
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1) !important;
@@ -569,5 +596,11 @@ nav div * {
 .hover\:shadow-xl:hover {
   --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1) !important;
   --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color) !important;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow) !important;
+}
+
+.focus\:shadow-md:focus {
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1) !important;
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color) !important;
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow) !important;
 }

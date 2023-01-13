@@ -1,3 +1,3 @@
-<div id="logo">
+<a href="/" id="logo">
   Slim
-</div><?php /**PATH /home/cprimbee/Development/authorize-slim-4/resources/views/sections/navigation/logo.blade.php ENDPATH**/ ?>
+</a><?php /**PATH /home/cprimbee/Development/authorize-slim-4/resources/views/sections/navigation/logo.blade.php ENDPATH**/ ?>

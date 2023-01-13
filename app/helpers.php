@@ -6,24 +6,34 @@ use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
 use Illuminate\Support\Collection;
 
-/*
-* collect
-* factory
-* env
-* base_path
-* config_path
-* resource_path
-* public_path
-* routes_path
-* storage_path
-* app_path
-* dd (dump and die)
-* throw_when
-* class_basename
-* config
-* data_get
-* data_set
-*/
+/**
+ * redirect
+ * collect
+ * factory
+ * env
+ * base_path
+ * config_path
+ * resource_path
+ * public_path
+ * routes_path
+ * storage_path
+ * app_path
+ * dd (dump and die)
+ * throw_when
+ * class_basename
+ * config
+ * data_get
+ * data_set
+ */
+
+if (!function_exists('redirect')) {
+  function redirect(string $to)
+  {
+    $redirect = app()->resolve(\App\Support\Redirect::class);
+
+    return $redirect($to);
+  }
+}
 
 if (!function_exists('collect')) {
   function collect($items)
