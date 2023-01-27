@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Boot\Foundation;
 
+use Boot\Foundation\Bootstrappers\Bootstrapper;
 use Boot\Foundation\Kernel;
 
 class HttpKernel extends Kernel
@@ -29,6 +30,7 @@ class HttpKernel extends Kernel
     Bootstrappers\LoadDebuggingPage::class,
     Bootstrappers\LoadAliases::class,
     Bootstrappers\LoadHttpMiddleware::class,
+    Bootstrappers\LoadCsrf::class,
     Bootstrappers\LoadBladeTemplates::class,
     Bootstrappers\LoadServiceProviders::class,
   ];

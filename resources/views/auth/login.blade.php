@@ -7,6 +7,8 @@
         Login
       </h1>
 
+      @csrf
+      
       <input
         required 
         type="email"
