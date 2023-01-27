@@ -7,6 +7,7 @@ use Illuminate\Support\Str;
 use Illuminate\Support\Collection;
 
 /**
+ * asset
  * redirect
  * collect
  * factory
@@ -25,6 +26,13 @@ use Illuminate\Support\Collection;
  * data_get
  * data_set
  */
+
+if (!function_exists('asset')) {
+  function asset(string $path)
+  {
+    return env('APP_URL') . "/{$path}";
+  }
+}
 
 if (!function_exists('redirect')) {
   function redirect(string $to)

@@ -10,6 +10,7 @@ class ConsoleKernel extends Kernel
 {
   public array $commands = [
     Commands\ServerCommand::class,
+    Commands\ViewClearCommand::class,
     Commands\MakeSeederCommand::class,
     Commands\DatabaseFreshCommand::class,
     Commands\MakeMigrationCommand::class,
