@@ -2,5 +2,5 @@ vendor
 .idea
 .env
 node_modules
-storage/cache/*.php
-storage/error_logs/*.html
+storage/*/**.php
+storage/*/**.html
